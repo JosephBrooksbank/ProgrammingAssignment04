@@ -48,8 +48,9 @@ public class main {
             }
 
             /* if there are planes in the queue, send them to the runways */
-            if (planes.heapSize >= 1) {
+
                 for (int i = 0; i < numRumways; i++) {
+                    if (planes.heapSize >= 1) {
                     Plane landingPlane = planes.extractMin();
                     stdout.write(landingPlane + "   " + time + "\n");
 
